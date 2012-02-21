@@ -56,7 +56,6 @@
                         NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
                         [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
                         value = [numberFormatter numberFromString:value];
-                        [numberFormatter release];
                     } else if ([class isSubclassOfClass:[NSDate class]] && [value isKindOfClass:[NSString class]] && (dateFormatter != nil)) {
                         value = [dateFormatter dateFromString:value];
                     }
@@ -80,7 +79,6 @@
                         NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
                         [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
                         value = [numberFormatter numberFromString:value];
-                        [numberFormatter release];
                     }
                     break;
                 }
