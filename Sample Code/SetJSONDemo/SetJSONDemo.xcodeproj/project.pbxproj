@@ -1,0 +1,249 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE776C7F14F40E220009E9D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE776C7E14F40E220009E9D9 /* Foundation.framework */; };
+		EE776C8214F40E220009E9D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE776C8114F40E220009E9D9 /* main.m */; };
+		EE776C8614F40E220009E9D9 /* SetJSONDemo.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE776C8514F40E220009E9D9 /* SetJSONDemo.1 */; };
+		EE776C8E14F40E420009E9D9 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EE776C8D14F40E420009E9D9 /* TestClass.m */; };
+		EE776C9114F40E5E0009E9D9 /* NSObject+setValuesForKeysWithJSONDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = EE776C9014F40E5E0009E9D9 /* NSObject+setValuesForKeysWithJSONDictionary.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE776C7814F40E220009E9D9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				EE776C8614F40E220009E9D9 /* SetJSONDemo.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EE776C7A14F40E220009E9D9 /* SetJSONDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SetJSONDemo; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE776C7E14F40E220009E9D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EE776C8114F40E220009E9D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE776C8414F40E220009E9D9 /* SetJSONDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SetJSONDemo-Prefix.pch"; sourceTree = "<group>"; };
+		EE776C8514F40E220009E9D9 /* SetJSONDemo.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SetJSONDemo.1; sourceTree = "<group>"; };
+		EE776C8C14F40E420009E9D9 /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
+		EE776C8D14F40E420009E9D9 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
+		EE776C8F14F40E5E0009E9D9 /* NSObject+setValuesForKeysWithJSONDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+setValuesForKeysWithJSONDictionary.h"; path = "../../../NSObject+setValuesForKeysWithJSONDictionary.h"; sourceTree = "<group>"; };
+		EE776C9014F40E5E0009E9D9 /* NSObject+setValuesForKeysWithJSONDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+setValuesForKeysWithJSONDictionary.m"; path = "../../../NSObject+setValuesForKeysWithJSONDictionary.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE776C7714F40E220009E9D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE776C7F14F40E220009E9D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE776C6F14F40E220009E9D9 = {
+			isa = PBXGroup;
+			children = (
+				EE776C8014F40E220009E9D9 /* SetJSONDemo */,
+				EE776C7D14F40E220009E9D9 /* Frameworks */,
+				EE776C7B14F40E220009E9D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE776C7B14F40E220009E9D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE776C7A14F40E220009E9D9 /* SetJSONDemo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE776C7D14F40E220009E9D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE776C7E14F40E220009E9D9 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE776C8014F40E220009E9D9 /* SetJSONDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EE776C8114F40E220009E9D9 /* main.m */,
+				EE776C8C14F40E420009E9D9 /* TestClass.h */,
+				EE776C8D14F40E420009E9D9 /* TestClass.m */,
+				EE776C8F14F40E5E0009E9D9 /* NSObject+setValuesForKeysWithJSONDictionary.h */,
+				EE776C9014F40E5E0009E9D9 /* NSObject+setValuesForKeysWithJSONDictionary.m */,
+				EE776C8514F40E220009E9D9 /* SetJSONDemo.1 */,
+				EE776C8314F40E220009E9D9 /* Supporting Files */,
+			);
+			path = SetJSONDemo;
+			sourceTree = "<group>";
+		};
+		EE776C8314F40E220009E9D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE776C8414F40E220009E9D9 /* SetJSONDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE776C7914F40E220009E9D9 /* SetJSONDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE776C8914F40E220009E9D9 /* Build configuration list for PBXNativeTarget "SetJSONDemo" */;
+			buildPhases = (
+				EE776C7614F40E220009E9D9 /* Sources */,
+				EE776C7714F40E220009E9D9 /* Frameworks */,
+				EE776C7814F40E220009E9D9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SetJSONDemo;
+			productName = SetJSONDemo;
+			productReference = EE776C7A14F40E220009E9D9 /* SetJSONDemo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE776C7114F40E220009E9D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Atomic Bird, LLC";
+			};
+			buildConfigurationList = EE776C7414F40E220009E9D9 /* Build configuration list for PBXProject "SetJSONDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EE776C6F14F40E220009E9D9;
+			productRefGroup = EE776C7B14F40E220009E9D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE776C7914F40E220009E9D9 /* SetJSONDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE776C7614F40E220009E9D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE776C8214F40E220009E9D9 /* main.m in Sources */,
+				EE776C8E14F40E420009E9D9 /* TestClass.m in Sources */,
+				EE776C9114F40E5E0009E9D9 /* NSObject+setValuesForKeysWithJSONDictionary.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EE776C8714F40E220009E9D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EE776C8814F40E220009E9D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EE776C8A14F40E220009E9D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SetJSONDemo/SetJSONDemo-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE776C8B14F40E220009E9D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SetJSONDemo/SetJSONDemo-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE776C7414F40E220009E9D9 /* Build configuration list for PBXProject "SetJSONDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE776C8714F40E220009E9D9 /* Debug */,
+				EE776C8814F40E220009E9D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE776C8914F40E220009E9D9 /* Build configuration list for PBXNativeTarget "SetJSONDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE776C8A14F40E220009E9D9 /* Debug */,
+				EE776C8B14F40E220009E9D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE776C7114F40E220009E9D9 /* Project object */;
+}
