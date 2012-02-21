@@ -9,6 +9,7 @@
 #import "NSData+reallyMapped.h"
 #import <sys/fcntl.h>
 #import <sys/mman.h>
+#include <sys/stat.h>
 #import "NSObject+deallocBlock.h"
 
 @implementation NSData (reallyMapped)
@@ -22,16 +23,15 @@
     }
     
     // Get file size
-    NSDictionary *fileAttributes = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil];
-    if (fileAttributes == nil) {
+    struct stat statbuf;
+    if (fstat(fd, &statbuf) == -1) {
         close(fd);
         return nil;
     }
-    NSNumber *fileSize = [fileAttributes objectForKey:NSFileSize];
     
     // mmap
     void *mappedFile;
-    mappedFile = mmap(0, [fileSize intValue], PROT_READ, MAP_FILE|MAP_PRIVATE, fd, 0);
+    mappedFile = mmap(0, statbuf.st_size, PROT_READ, MAP_FILE|MAP_PRIVATE, fd, 0);
     close(fd);
     if (mappedFile == MAP_FAILED) {
         NSLog(@"Map failed, errno=%d, %s", errno, strerror(errno));
@@ -39,10 +39,10 @@
     }
 
     // Create the NSData
-    NSData *mappedData = [NSData dataWithBytesNoCopy:mappedFile length:[fileSize intValue] freeWhenDone:NO];
+    NSData *mappedData = [NSData dataWithBytesNoCopy:mappedFile length:statbuf.st_size freeWhenDone:NO];
     
     [mappedData addDeallocBlock:^{
-        munmap(mappedFile, [fileSize intValue]);
+        munmap(mappedFile, statbuf.st_size);
     }];
     return mappedData;
 }
