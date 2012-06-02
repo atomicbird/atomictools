@@ -8,7 +8,7 @@ A collection of useful Objective-C code and other items of use to iOS and Mac OS
 
 * `NSData+reallyMapped.h`: Create an NSData object using a memory mapped file. Works even though `dataWithContentsOfMappedFile:` is deprecated in iOS 5.0 and `NSDataReadingMappedAlways` doesn't always (despite the name) create memory mapped instances. Described in detail at [CIMGF](http://www.cimgf.com/2012/02/17/extending-nsdata-and-not-overriding-dealloc/).
 
-* `fixpng.sh`: Two shell functions useful for converting iOS-optimized PNGs back into standard PNGs. These functions rely on the `xcrun` command-line tool and probably require that Xcode 4.3 or higher be installed.
+* `fixpng.sh`: Two bash functions useful for converting iOS-optimized PNGs back into standard PNGs. These functions rely on the `xcrun` command-line tool and probably require that Xcode 4.3 or higher be installed. Based on Daniel Jalkut's [zsh version](https://gist.github.com/2854083).
 
 # Important note
 
