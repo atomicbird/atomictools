@@ -1,6 +1,6 @@
 # Atomic Tools
 
-A collection of useful Objective-C code. Most of this has been blogged about at [Cocoa is my Girlfriend](http://www.cimgf.com/).
+A collection of useful Objective-C code and other items of use to iOS and Mac OS X developers. Most of this has been blogged about at [Cocoa is my Girlfriend](http://www.cimgf.com/).
 
 * `NSObject+setValuesForKeysWithJSONDictionary.h`: Safer alternative to `setValuesForKeysWithDictionary:` for use when importing JSON. Works with any object with declared properties corresponding to JSON dictionary keys. Detailed discussion is at [CIMGF](http://www.cimgf.com/2012/01/11/handling-incoming-json-redux/).
 
@@ -8,6 +8,8 @@ A collection of useful Objective-C code. Most of this has been blogged about at 
 
 * `NSData+reallyMapped.h`: Create an NSData object using a memory mapped file. Works even though `dataWithContentsOfMappedFile:` is deprecated in iOS 5.0 and `NSDataReadingMappedAlways` doesn't always (despite the name) create memory mapped instances. Described in detail at [CIMGF](http://www.cimgf.com/2012/02/17/extending-nsdata-and-not-overriding-dealloc/).
 
+* `fixpng.sh`: Two shell functions useful for converting iOS-optimized PNGs back into standard PNGs. These functions rely on the `xcrun` command-line tool and probably require that Xcode 4.3 or higher be installed.
+
 # Important note
 
-All code in this repository is designed for use with automated reference counting (ARC). If you are not using ARC you may experience memory leaks or worse.
+All Objective-C code in this repository is designed for use with automated reference counting (ARC). If you are not using ARC you may experience memory leaks or worse.
