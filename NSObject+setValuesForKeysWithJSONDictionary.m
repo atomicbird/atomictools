@@ -17,20 +17,32 @@
     objc_property_t *properties = class_copyPropertyList([self class], &propertyCount);
     
     /*
-     This code iterates over self's properties instead of ivars because the backing ivar might have a different name
+     This code starts by over self's properties instead of ivars because the backing ivar might have a different name
      than the property, for example if the class includes something like:
      
      @synthesize foo = foo_;
      
-     In this case what we really want is "foo", not "foo_", since the incoming keys in keyedValues probably
+     In this case what we probably want is "foo", not "foo_", since the incoming keys in keyedValues probably
      don't have the underscore. Looking through properties gets "foo", looking through ivars gets "foo_".
+     
+     If there's no property name that matches the incoming key name, the code checks the ivars as well.
      */
     for (int i=0; i<propertyCount; i++) {
         objc_property_t property = properties[i];
         const char *propertyName = property_getName(property);
         NSString *keyName = [NSString stringWithUTF8String:propertyName];
         
+        // See if the property name is being supplied in the JSON dictionary.
         id value = [keyedValues objectForKey:keyName];
+        
+        // If not, see if the backing ivar name is being supplied in the JSON dictionary.
+        if (value == nil) {
+            const char *ivarPropertyName = property_copyAttributeValue(property, "V");
+            NSString *ivarName = [NSString stringWithUTF8String:ivarPropertyName];
+            value = [keyedValues objectForKey: ivarName];
+            free((void *)ivarPropertyName);
+        }
+        
         if (value != nil) {
             char *typeEncoding = NULL;
             typeEncoding = property_copyAttributeValue(property, "T");

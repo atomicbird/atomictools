@@ -11,7 +11,7 @@
 @implementation TestClass
 
 @synthesize date;
-@synthesize string;
+@synthesize string = string_;
 @synthesize floatNumber;
 
 @synthesize unsignedInteger;

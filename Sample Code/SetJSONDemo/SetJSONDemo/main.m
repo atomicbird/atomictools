@@ -23,7 +23,7 @@ int main(int argc, const char * argv[])
         NSDictionary *dictionary;
         dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                       [NSNumber numberWithInt:27], @"string",
-                      
+
                       @"foo", @"bar",
                       
                       @"1.23", @"floatNumber",
@@ -38,7 +38,8 @@ int main(int argc, const char * argv[])
         [test setValuesForKeysWithJSONDictionary:dictionary dateFormatter:dateFormatter];
         
         dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-                      [NSNumber numberWithInt:27], @"string",
+                      // Use the ivar name this time instead of the property name.
+                      [NSNumber numberWithInt:27], @"string_",
                       
                       [NSNumber numberWithFloat:2.34], @"floatNumber",
                       
